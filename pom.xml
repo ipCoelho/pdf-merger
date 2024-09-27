@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0     http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>br.com.hinova</groupId>
+    <artifactId>power-pdf-manager</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <!-- Updated Spring Boot parent version to the latest stable release -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.1.5</version> <!-- Updated to the latest version -->
+        <relativePath/>
+    </parent>
+
+    <properties>
+        <!-- Specify the Java version compatible with Spring Boot 3.x -->
+        <java.version>17</java.version>
+    </properties>
+
+    <dependencies>
+        <!-- Updated dependencies to ensure they use the latest versions provided by Spring Boot -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <!-- No version needed; inherits version from parent -->
+        </dependency>
+    <!-- Include other dependencies as needed, ensuring they are up-to-date -->
+    </dependencies>
+
+    <build>
+    <plugins>
+        <!-- Use the Spring Boot Maven Plugin version compatible with the parent -->
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <!-- Version inherited from parent; no need to specify -->
+        </plugin>
+    </plugins>
+    </build>
+</project>
