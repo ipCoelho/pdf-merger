@@ -74,15 +74,6 @@ public class PdfMergeService {
         responseDto.setCreatedAt(mergedPdf.getCreatedAt());
 
         // Prepare message payload
-        Map<String, Object> message = new HashMap<>();
-        message.put("mergedPdfId", mergedPdf.getId());
-        message.put("filePaths", Arrays.stream(pdfFiles)
-                .map(File::getAbsolutePath)
-                .collect(Collectors.toList()));
-        message.put("mergedFilePath", mergedFilePath);
-
-        // Send message to RabbitMQ
-        rabbitTemplate.convertAndSend(PDF_MERGE_EXCHANGE, PDF_MERGE_ROUTING_KEY, message);
 
         return responseDto;
     }
