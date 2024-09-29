@@ -8,7 +8,6 @@
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <!-- Updated Spring Boot parent version to the latest stable release -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -17,27 +16,52 @@
     </parent>
 
     <properties>
-        <!-- Specify the Java version compatible with Spring Boot 3.x -->
         <java.version>17</java.version>
     </properties>
 
     <dependencies>
-        <!-- Updated dependencies to ensure they use the latest versions provided by Spring Boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <!-- No version needed; inherits version from parent -->
+            <version>3.3.2</version>
         </dependency>
-    <!-- Include other dependencies as needed, ensuring they are up-to-date -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+            <version>3.3.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>3.3.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.34</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <version>3.3.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>3.0.3</version>
+        </dependency>
     </dependencies>
 
     <build>
     <plugins>
-        <!-- Use the Spring Boot Maven Plugin version compatible with the parent -->
         <plugin>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>
-            <!-- Version inherited from parent; no need to specify -->
         </plugin>
     </plugins>
     </build>
